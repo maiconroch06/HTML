@@ -1,0 +1,11 @@
+.conteudoPrincipal{
+    background-color: #0B699C;
+    width: 40%;
+    height: 60%;
+}
+
+main{
+    width: 1024px;
+    height: 768px;
+    background-color: rgb(255, 255, 255);
+}
