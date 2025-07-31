@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/cadastro.css">
+    <title>Cadastro - Anny Nutri</title>
+</head>
+<body>
+    <div class="page">
+        <form method="POST" class="formCadastro">
+            <h1>Cadastro</h1>
+            <p>Preencha os campos abaixo para criar sua conta.</p>
+
+            <label for="nome_cad">Seu nome</label>
+            <input id="nome_cad" name="nome_cad" required type="text" placeholder="Nome completo" />
+
+            <label for="email_cad">Seu e-mail</label>
+            <input id="email_cad" name="email_cad" required type="email" placeholder="contato@exemplo.com"/>
+
+            <label for="senha_cad">Sua senha</label>
+            <input id="senha_cad" name="senha_cad" required type="password" placeholder="Mínimo 8 caracteres" />
+            
+            <!-- Dica de UX: Campo de confirmação de senha -->
+            <label for="confirma_senha_cad">Confirme sua senha</label>
+            <input id="confirma_senha_cad" name="confirma_senha_cad" required type="password" placeholder="Repita sua senha" />
+
+            <input type="submit" value="Cadastrar" class="btn" />
+
+            <p class="link">
+                Já tem conta? <a href="login.html">Ir para Login</a>
+            </p>
+        </form>
+    </div>
+</body>
+</html>
+</html>

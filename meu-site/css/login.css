@@ -1,0 +1,212 @@
+/* Passo 1: O Reset CSS Essencial */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box; /* Garante que padding e borda sejam incluídos na largura/altura total [11] */
+}
+
+/* Passo 2: O Layout Principal do Corpo (Body) */
+body {
+  background: white; /* Define a cor de fundo do site como branco [Previous conversation] */
+  min-height: 100vh; /* Garante que o corpo da página ocupe no mínimo 100% da altura visível [1] */
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; /* Define uma pilha de fontes [1] */
+  padding: 0;
+  display: flex; /* Habilita Flexbox no body para organizar os filhos [1] */
+  flex-direction: column; /* Organiza os filhos em coluna: header no topo, conteúdo abaixo */
+}
+
+/* Estilizando o Retângulo Roxo como uma barra superior */
+.retangulo-roxo {
+  width: 100%; /* Ocupa 100% da largura [Previous conversation] */
+  height: 80px; /* Altura da barra superior [Previous conversation] */
+  background: linear-gradient(135deg, #764ba2 0%, #667eea 100%); /* Gradiente roxo escuro para roxo claro [Previous conversation, 65] */
+  border-radius: 0; /* Remove o arredondamento dos cantos [Previous conversation] */
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1); /* Sombra sutil [Previous conversation] */
+  padding: 0 20px; /* Espaçamento interno horizontal [Previous conversation] */
+  color: white; /* Cor do texto dentro do retângulo [Previous conversation] */
+  display: flex; /* Habilita Flexbox para o conteúdo interno [Previous conversation] */
+  align-items: center; /* Centraliza verticalmente o conteúdo (texto) [Previous conversation] */
+  /* justify-content: center; e text-align: center; foram removidos para que o texto não fique centralizado horizontalmente, conforme solicitado. */
+}
+
+.retangulo-roxo p {
+  margin: 0; /* Garante que o parágrafo dentro do header não tenha margens adicionais */
+  padding-left: 10px; /* Um pequeno padding para o texto não colar na borda esquerda */
+}
+
+/* Área principal de conteúdo para centralizar o formulário */
+.main-content-area {
+  flex-grow: 1; /* Faz com que esta div ocupe todo o espaço vertical restante disponível no body */
+  display: flex; /* Habilita Flexbox dentro desta div */
+  justify-content: center; /* Centraliza o formulário horizontalmente dentro desta área [1] */
+  align-items: center; /* Centraliza o formulário verticalmente dentro desta área [1] */
+  padding: 20px; /* Adiciona um padding geral para não colar nas bordas em telas menores */
+}
+
+/* Estilizando o Formulário de Login */
+.form-login {
+  background: linear-gradient(135deg, #2c3e8d 0%, #936abd 100%); /* Fundo branco para o formulário [2, 3] */
+  border-radius: 12px; /* Cantos arredondados [3] */
+  box-shadow: 0 10px 30px rgba(223, 215, 215, 0.1); /* Sombra mais destacada para elevação [3] */
+  padding: 40px; /* Espaçamento interno generoso [3] */
+  width: 100%; /* Largura padrão */
+  max-width: 400px; /* Largura máxima para o formulário, para não ser muito largo em telas grandes */
+  display: flex; /* Habilita Flexbox para organizar os elementos internos */
+  flex-direction: column; /* Empilha os elementos verticalmente */
+  gap: 15px; /* Espaçamento entre os elementos do formulário [2] */
+}
+
+.form-login h1 {
+  font-size: 2em; /* Tamanho do título "Login" */
+  color: #e9e5e5;
+  margin-bottom: 10px;
+  text-align: center; /* Centraliza o título "Login" */
+}
+
+.form-login p {
+  font-size: 0.9em; /* Tamanho do texto descritivo */
+  color: #e9e6e6;
+  margin-bottom: 20px;
+  text-align: center; /* Centraliza o texto descritivo */
+}
+
+.form-login label {
+  font-size: 0.9em;
+  color: #f8f0f0;
+  font-weight: 600;
+  margin-bottom: 5px; /* Pequeno espaço entre label e input [12] */
+  display: block; /* Garante que o label ocupe sua própria linha [12] */
+}
+
+.form-login input[type="email"],
+.form-login input[type="password"] {
+  width: 100%; /* Inputs ocupam 100% da largura do formulário [5] */
+  padding: 12px 15px; /* Espaçamento interno [5] */
+  border: 1px solid #ddd; /* Borda suave [5] */
+  border-radius: 8px; /* Cantos arredondados [5] */
+  font-size: 1em; /* Tamanho da fonte do texto digitado [5] */
+  transition: border-color 0.3s ease, box-shadow 0.3s ease; /* Transição suave para foco [5] */
+  outline: none; /* Remove contorno padrão do navegador [5] */
+}
+
+.form-login input[type="email"]:focus,
+.form-login input[type="password"]:focus {
+  border-color: #5f6dac; /* Cor da borda ao focar, do gradiente principal [2, 6] */
+  box-shadow: 0 0 0 3px rgba(102, 126, 234, 0.15); /* Sombra suave ao focar [6] */
+}
+
+/* Estilo do Botão "Entrar" */
+.btn-entrar {
+  background: linear-gradient(135deg, #465ec9 0%, #764ba2 100%); /* Gradiente do tema [7] */
+  color: white; /* Cor do texto do botão [7] */
+  padding: 12px 20px;
+  border: none; /* Remove a borda padrão [13] */
+  border-radius: 8px; /* Cantos arredondados [13] */
+  font-size: 1em;
+  font-weight: bold;
+  cursor: pointer; /* Cursor de ponteiro [13] */
+  transition: transform 0.3s ease, box-shadow 0.3s ease; /* Transições para hover [13] */
+  margin-top: 10px; /* Espaçamento acima do botão */
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1); /* Sombra para elevação [7] */
+}
+
+.btn-entrar:hover {
+  transform: translateY(-2px); /* Efeito de "flutuar" ligeiramente ao passar o mouse [7] */
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2); /* Sombra mais pronunciada no hover [7] */
+}
+
+/* Container para os links de "Fazer cadastro" e "Recuperar senha" */
+.links-form {
+  display: flex;
+  flex-direction: column; /* Empilha os links verticalmente */
+  align-items: center; /* Centraliza os links horizontalmente dentro do container */
+  margin-top: 15px; /* Espaço entre o botão e os links */
+  gap: 8px; /* Espaçamento entre os links */
+}
+
+.links-form a {
+  color: #ffffff; /* Cor dos links, combinando com o tema [2] */
+  text-decoration: none; /* Remove sublinhado padrão [2] */
+  font-size: 0.9em;
+  transition: color 0.3s ease, text-decoration 0.3s ease; /* Transição suave para hover [2] */
+}
+
+.links-form a:hover {
+  color: #764ba2; /* Cor mais escura no hover [8] */
+  text-decoration: underline; /* Sublinhado no hover [8] */
+}
+
+/* Media Queries para Responsividade */
+@media (max-width: 768px) {
+  .form-login {
+      padding: 30px; /* Reduz o padding interno do formulário */
+      max-width: 90%; /* Ocupa mais largura em tablets [9] */
+  }
+  .form-login h1 {
+      font-size: 1.8em; /* Ajusta o tamanho da fonte */
+  }
+  .form-login p {
+      font-size: 0.85em; /* Ajusta o tamanho da fonte */
+  }
+}
+
+@media (max-width: 480px) {
+  .retangulo-roxo {
+      height: 70px; /* Um pouco menor em mobile para otimizar espaço */
+      padding: 0 15px;
+  }
+  .main-content-area {
+      padding: 10px; /* Reduz o padding geral da área de conteúdo */
+  }
+  .form-login {
+      padding: 20px; /* Mais redução no padding do formulário [10] */
+      max-width: 100%; /* Ocupa 100% da largura em mobiles [10] */
+      border-radius: 8px; /* Cantos um pouco menos arredondados [10] */
+  }
+  .form-login h1 {
+      font-size: 1.5em; /* Redução adicional do título [10] */
+  }
+  .form-login label,
+  .form-login input,
+  .btn-entrar,
+  .links-form a {
+      font-size: 0.9em; /* Ajusta tamanho da fonte de outros elementos [10] */
+  }
+}
+
+/* Estilo para campos de e-mail e senha INVÁLIDOS */
+.form-login input[type="email"]:invalid:not(:placeholder-shown),
+.form-login input[type="password"]:invalid:not(:placeholder-shown) {
+    border-color: #e74c3c; /* Define a borda na cor vermelha de erro [4, 5] */
+    box-shadow: 0 0 0 3px rgba(231, 76, 60, 0.2); /* Adiciona uma sombra suave vermelha para destaque */
+    animation: shake 0.3s ease-in-out; /* Adiciona uma animação sutil de "balançar" para chamar a atenção [3, 4] */
+}
+
+/* Definição da animação 'shake' (tremer) */
+@keyframes shake {
+    0%, 100% {
+        transform: translateX(0); /* Começa e termina na posição original [3, 4] */
+    }
+    25% {
+        transform: translateX(-5px); /* Balança 5px para a esquerda [3, 4] */
+    }
+    75% {
+        transform: translateX(5px); /* Balança 5px para a direita [3, 4] */
+    }
+}
+
+/* Estilo para campos de e-mail e senha VÁLIDOS (opcional, para feedback positivo) */
+.form-login input[type="email"]:valid:not(:placeholder-shown),
+.form-login input[type="password"]:valid:not(:placeholder-shown) {
+    border-color: #27ae60; /* Define a borda na cor verde de sucesso [4, 5] */
+    box-shadow: 0 0 0 3px rgba(39, 174, 96, 0.1); /* Sombra suave verde */
+    animation: none; /* Remove a animação se o campo se tornar válido */
+}
+
+/* Ajuste o estilo de foco para campos que são inválidos, garantindo que a borda de erro prevaleça */
+.form-login input[type="email"]:focus:invalid,
+.form-login input[type="password"]:focus:invalid {
+    border-color: #e74c3c; /* Mantém a cor de erro no foco */
+    box-shadow: 0 0 0 4px rgba(231, 76, 60, 0.2); /* Sombra de erro mais proeminente */
+    transform: translateY(0); /* Remove elevação sutil do foco normal, se aplicável, para focar no erro */
+}
